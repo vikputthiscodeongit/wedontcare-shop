@@ -1,0 +1,26 @@
+body {
+    min-width: $body-min-width;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 0.0625rem;
+    text-size-adjust: 100%;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $black;
+}
+
+ol, ul {
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+a {
+    color: $white;
+    transition: $transition-base;
+    transition-property: text-decoration-color, color;
+}
+
+.ar-box {
+    @include aspect-ratio(1, 1);
+}

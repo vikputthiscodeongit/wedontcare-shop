@@ -5,7 +5,7 @@
 </div>
 
 <div class="nav-item">
-  <a class="nav-link" href="#" target="_self">Latest</a>
+  <a class="nav-link" href="https://latest.wedontcaregroup.com" target="_self">Latest</a>
 </div>
 
 <div class="nav-item">

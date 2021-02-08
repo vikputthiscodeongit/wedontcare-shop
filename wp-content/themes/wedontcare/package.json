@@ -31,13 +31,13 @@
     ">= 1%",
     "last 1 major version",
     "not dead",
-    "Chrome >= 49",
-    "Firefox >= 45",
-    "Edge >= 12",
-    "Explorer >= 11",
-    "iOS >= 9",
-    "Safari >= 9",
-    "Android >= 4.4",
-    "Opera >= 36"
+    "Chrome >= 61",
+    "Firefox >= 56",
+    "Edge >= 16",
+    "not Explorer <= 11",
+    "iOS >= 11",
+    "Safari >= 11",
+    "not Android <= 4.4.4",
+    "Opera >= 48"
   ]
 }

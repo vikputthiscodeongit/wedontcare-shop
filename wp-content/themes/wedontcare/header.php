@@ -1,13 +1,5 @@
-<?php
-  // Define page names
-  $page = str_replace(".php", "", basename($_SERVER["PHP_SELF"]));
-
-  if ($page === "index") {
-    $page = "landing";
-  }
-?>
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
   <head>
     <!--
 
@@ -34,5 +26,5 @@
     <meta name="theme-color" content="#000000">
   </head>
 
-  <body class="<?php echo $page; ?> bg-dark">
+  <body <?php body_class(); ?>>
     <main>

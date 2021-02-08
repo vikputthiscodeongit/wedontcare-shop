@@ -119,16 +119,6 @@
 
 
   //
-  // Add ACF "Options" page
-  function add_acf_options() {
-    if (function_exists("acf_add_options_page")) {
-      acf_add_options_page();
-    }
-  }
-  add_action("after_setup_theme", "add_acf_options");
-
-
-  //
   // Remove meta boxes from the editor
   function remove_meta_boxes() {
     remove_post_type_support("page", "page-attributes");

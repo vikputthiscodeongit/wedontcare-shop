@@ -1,18 +1,8 @@
 main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   min-height: 100vh;
 
   @include only-ie {
     min-height: none;
     height: 100vh;
-  }
-
-  .landing & {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: rem(20px) auto rem(20px);
-    padding: rem(8px);
   }
 }

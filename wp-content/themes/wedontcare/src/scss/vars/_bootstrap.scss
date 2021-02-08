@@ -1,19 +1,24 @@
 // Color system
+$white:    #fff !default;
 $black:    #000 !default;
 
-$primary:       $black;
+$primary:       $white;
+$secondary:     $black;
 
 $theme-colors: (
-    "primary":    $primary
+    "primary":    $primary,
+    "secondary":  $secondary
 );
 
 
 // Body
-$body-color: $black;
+$body-color:                $black;
 
 
 // Links
+$link-color:                              theme-color("primary") !default;
 $link-decoration:                         transparent solid underline;
+$link-hover-color:                        $link-color;
 $link-hover-decoration:                   currentColor solid underline;
 
 

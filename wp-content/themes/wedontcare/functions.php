@@ -182,10 +182,10 @@
   }
   add_action("init", "woo_remove_template_components");
 
-  // Redirect direct requests to the product overview
+  // Redirect direct requests to home (= product overview)
   function woo_redirect_single_product() {
     if (is_product()) {
-      wp_redirect(get_permalink(get_page_by_title("Shop")), 301);
+      wp_redirect(home_url(), 301);
 
       exit;
     }

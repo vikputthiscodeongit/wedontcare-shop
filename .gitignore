@@ -81,7 +81,7 @@ Thumbs.db
 *.zip
 
 # ignore distributables
-wp-content/themes/wedontcare/dist
+wp-content/themes/wedontcare/dist/
 
 # -------------------------
 # BEGIN Whitelisted Files

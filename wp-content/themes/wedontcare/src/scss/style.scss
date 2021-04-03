@@ -87,6 +87,7 @@ $spacers: map-remove($spacers, 1, 2, 3, 4);
 @import "components/general";
 @import "components/type";
 @import "components/media";
+@import "components/input";
 @import "components/layout";
 @import "components/header";
 @import "components/nav";

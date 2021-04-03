@@ -41,25 +41,21 @@ $link-hover-decoration:                   currentColor solid underline;
 // Grid breakpoints
 $grid-breakpoints: (
     xxs: 0,
-    xs: 375px,
+    xs: 360px,
     sm: 568px,
     md: 768px,
     lg: 992px,
-    xl: 1200px,
-    xxl: 1920px,
-    xxxl: 2560px
+    xl: 1200px
 );
 
 
 // Grid containers
 $container-max-widths: (
-    xs: 448px,
+    xs: 480px,
     sm: 540px,
     md: 720px,
     lg: 960px,
-    xl: 1140px,
-    xxl: 1280px,
-    xxxl: 1366px
+    xl: 1024px
 );
 
 

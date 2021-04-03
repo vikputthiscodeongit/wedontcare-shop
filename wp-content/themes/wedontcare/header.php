@@ -27,5 +27,48 @@
   </head>
 
   <body <?php body_class(); ?>>
+    <?php
+      // if (has_nav_menu("main")) {
+        ?>
+        <header class="site-header">
+          <div class="container">
+            <?php
+              // wp_nav_menu(array(
+              //   "menu"            => "Main menu",
+              //   "menu_class"      => "site-navigation__items",
+              //   "container_class" => "site-navigation",
+              //   "container"       => "nav",
+              //   "item_class"      => "site-navigation__item",
+              //   "link_class"      => "site-navigation__link",
+              //   "theme_location"  => "main"
+              // ));
+            ?>
+            <nav class="site-navigation">
+              <ul class="site-navigation__items">
+                <li class="site-navigation__item">
+                  <?php $link = "https://wedontcaregroup.com/"; ?>
+
+                  <a class="site-navigation__link" href="<?php echo $link; ?>" target="_self">WDC Universe</a>
+                </li>
+
+                <li class="site-navigation__item">
+                  <?php $link = wc_get_page_permalink("shop"); ?>
+
+                  <a class="site-navigation__link" href="<?php echo $link; ?>" target="_self">Shop</a>
+                </li>
+
+                <li class="site-navigation__item">
+                  <?php $link = wc_get_page_permalink("cart"); ?>
+
+                  <a class="site-navigation__link" href="<?php echo $link; ?>" target="_self">Cart</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <?php
+      // }
+    ?>
+
     <main>
       <div class="container">

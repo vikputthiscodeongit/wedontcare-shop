@@ -1,0 +1,38 @@
+.site-header {
+    padding-top: rem(16px);
+
+    @include respond-above(xl) {
+        padding-top: rem(24px);
+    }
+}
+
+.site-navigation {
+    &__item {
+        &s {
+            display: grid;
+            align-items: center;
+            grid-template-columns: repeat(3, minmax(10px, 1fr));
+            grid-column-gap: rem(16px);
+            margin-bottom: 0;
+            padding-left: 0;
+
+            @include respond-above(md) {
+                grid-column-gap: rem(24px);
+            }
+        }
+
+        list-style: none;
+
+        &:nth-child(2) {
+            text-align: center;
+        }
+
+        &:nth-child(3) {
+            text-align: right;
+        }
+    }
+
+    &__link {
+        color: $secondary;
+    }
+}

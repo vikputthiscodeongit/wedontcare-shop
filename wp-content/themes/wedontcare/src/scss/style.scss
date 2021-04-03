@@ -9,13 +9,16 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
+// Clean unused variables from maps
+$spacers: map-remove($spacers, 1, 2, 3, 4);
+
 // Components
 // @import "~bootstrap/scss/root";
 @import "~bootstrap/scss/reboot";
 // @import "~bootstrap/scss/type";
 // @import "~bootstrap/scss/images";
 // @import "~bootstrap/scss/code";
-// @import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/grid";
 // @import "~bootstrap/scss/tables";
 // @import "~bootstrap/scss/forms";
 // @import "~bootstrap/scss/buttons";
@@ -58,7 +61,7 @@
 // @import "~bootstrap/scss/utilities/shadows";
 // @import "~bootstrap/scss/utilities/sizing";
 // @import "~bootstrap/scss/utilities/stretched-link";
-// @import "~bootstrap/scss/utilities/spacing";
+@import "~bootstrap/scss/utilities/spacing";
 // @import "~bootstrap/scss/utilities/text";
 // @import "~bootstrap/scss/utilities/visibility";
 

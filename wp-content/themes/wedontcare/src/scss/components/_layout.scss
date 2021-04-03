@@ -4,5 +4,30 @@ main {
   @include only-ie {
     min-height: none;
     height: 100vh;
+
+.woocommerce,
+.woocommerce-page {
+  .col2-set .col-1,
+  .col2-set .col-2 {
+    // Reset to default
+    position: static;
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.woocommerce {
+  ul.products {
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    li.product {
+      // Reset to default
+      float: none !important;
+      width: auto !important;
+      margin: 0 !important;
+    }
   }
 }

@@ -28,3 +28,4 @@
 
   <body <?php body_class(); ?>>
     <main>
+      <div class="container">

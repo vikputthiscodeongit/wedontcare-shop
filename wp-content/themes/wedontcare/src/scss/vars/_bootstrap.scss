@@ -11,6 +11,22 @@ $theme-colors: (
 );
 
 
+// Spacing
+$spacers: (
+    0: 0,
+    // 1: rem(8px),
+    // 2: rem(16px),
+    // 3: rem(24px),
+    // 4: rem(32px),
+    5: rem(40px),
+    6: rem(60px)
+    // 7: rem(70px),
+    // 8: rem(80px),
+    // 9: rem(96px),
+    // 10: rem(120px)
+);
+
+
 // Body
 $body-color:                $black;
 

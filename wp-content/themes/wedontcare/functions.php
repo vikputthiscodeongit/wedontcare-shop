@@ -165,29 +165,54 @@
   // Disable marketplace suggestions
   add_filter("woocommerce_allow_marketplace_suggestions", "__return_false");
 
-  // Remove components from the templates
+  // Remove template components
   function woo_remove_template_components() {
-    /** PRODUCT ARCHIVES **/
+    /**
+     * archive-product
+     * single-product
+    **/
+    // Sidebar
+    remove_action("woocommerce_sidebar", "woocommerce_get_sidebar", 10);
     // Breadcrumbs
     remove_action("woocommerce_before_main_content", "woocommerce_breadcrumb", 20, 0);
+
+    /** archive-product **/
+    // Page title
+    add_filter("woocommerce_show_page_title", "__return_false");
     // Result count
     remove_action("woocommerce_before_shop_loop", "woocommerce_result_count", 20);
     // "Sort by"-dropdown
     remove_action("woocommerce_before_shop_loop", "woocommerce_catalog_ordering", 30);
 
-    /** PRODUCT CONTENT WITHIN LOOPS **/
+    /** content-product **/
+    // "Sale" badge
+    remove_action("woocommerce_before_shop_loop_item_title", "woocommerce_show_product_loop_sale_flash", 10);
     // Link to single product page
     remove_action("woocommerce_before_shop_loop_item", "woocommerce_template_loop_product_link_open", 10);
     remove_action("woocommerce_after_shop_loop_item", "woocommerce_template_loop_product_link_close", 5);
   }
   add_action("init", "woo_remove_template_components");
 
-  // Redirect direct requests to home (= product overview)
-  // function woo_redirect_single_product() {
-  //   if (is_product()) {
-  //     wp_redirect(home_url(), 301);
+  // Edit template components
+  add_action("woocommerce_before_shop_loop_item_title", function() {
+    echo "
+    <div class='media aspect-ratio aspect-ratio--square'>
+      <div class='content'>
+    ";
+  }, 9);
+  add_action("woocommerce_before_shop_loop_item_title", function() {
+    echo "
+      </div>
+    </div>
+    ";
+  }, 11);
 
-  //     exit;
-  //   }
-  // }
-  // add_action("template_redirect", "woo_redirect_single_product");
+  // Redirect direct requests to shop page (= product overview)
+  function woo_redirect_single_product() {
+    if (is_product()) {
+      wp_redirect(wc_get_page_permalink("shop"), 301);
+
+      exit;
+    }
+  }
+  add_action("template_redirect", "woo_redirect_single_product");

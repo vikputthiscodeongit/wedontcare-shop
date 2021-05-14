@@ -80,8 +80,8 @@ Thumbs.db
 *.tar
 *.zip
 
-# ignore distributables
-wp-content/themes/wedontcare/dist/
+#
+wp-content/themes/wedontcare-shop/dist/
 
 # -------------------------
 # BEGIN Whitelisted Files
@@ -108,4 +108,4 @@ wp-content/themes/wedontcare/dist/
 
 # track these mu-plugins, plugins, and themes
 # add your own entries here
-!wp-content/themes/wedontcare/
+!wp-content/themes/wedontcare-shop/

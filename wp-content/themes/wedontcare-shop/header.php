@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Character set -->
+    <meta charset="utf-8">
+
     <!--
 
-    - - - - - - - - - - - - - - - - - - - -
-    - This website is made by Viktor Chin -
-    - - - - - - - viktorchin.nl - - - - - -
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    - Website programmed by Viktor Chin for We Don't Care -
+    - - - - - - - - - - - viktorchin.nl - - - - - - - - - -
 
     -->
 
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
+    <!-- Viewport scaling -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Required site assets -->
+    <!-- Site assets -->
     <?php wp_head(); ?>
 
     <!-- Favicon stuff -->
